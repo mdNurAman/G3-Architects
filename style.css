@@ -4,6 +4,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 .dw {
   max-width: 75%;
   margin: 0 auto;
@@ -30,7 +37,9 @@
 .dark3 {
   color: #727272;
 }
-
+.orange-color {
+  color: #ff900e;
+}
 /* Navbar */
 header {
   background-color: rgba(255, 144, 14, 0.5);
@@ -95,34 +104,131 @@ header {
   height: auto;
   margin-bottom: 130px;
 }
+/* Feature */
+.feature-container {
+  display: flex;
+  align-items: center;
+  gap: 4.56rem;
+  margin-bottom: 130px;
+}
+.feature-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-left: 7%;
+}
+.feature-images img {
+  width: 100%;
+  height: auto;
+}
+.feature-texts {
+  max-width: 35%;
+}
+.feature-texts h3 {
+  margin-bottom: 24px;
+}
+.text-one {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+.text-two {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+.text-three {
+  font-weight: bold;
+  font-size: 2.8rem;
+}
+.feature-subtitle {
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+
+
 
 /* Media Query */
 @media screen and (max-width: 576px) {
-  .dw {
-    max-width: 90%;
-    margin: 0 auto;
+  body {
+    overflow-x: hidden;
   }
-  .brand{
+
+  .dw {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  .brand {
     text-align: center;
     font-size: 2rem;
   }
+
   .navbar {
     gap: 1rem;
+    padding: 20px 10px;
   }
-  .navmenu{
+
+  .navmenu {
     padding: 5px;
-    border:2px solid rgb(69, 134, 219);
+    border: 2px solid rgb(69, 134, 219);
     border-radius: 8px;
   }
+
   .navmenu {
     flex-direction: column;
     gap: 1rem;
   }
-  .banner-title{
-    font-size: 3rem;
-    border-bottom: 20px;
+
+  .banner-title {
+    font-size: 2.5rem;
+    max-width: 100%;
+    padding: 0 10px;
   }
-  .banner-subtitle{
+
+  .banner-subtitle {
     margin-bottom: 20px;
+    max-width: 100%;
+    padding: 0 10px;
   }
+
+  .banner img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* Feature Section */
+  .feature-container {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    margin-bottom: 50px;
+  }
+
+  .feature-images {
+    grid-template-columns: 1fr;
+    margin: 0;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .feature-images img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .feature-texts {
+    max-width: 100%;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .text-one,
+  .text-two,
+  .text-three {
+    font-size: 1.8rem;
+  }
+
+
 }
